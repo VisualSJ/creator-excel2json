@@ -1,0 +1,24 @@
+<header >
+    <ui-prop name="xlsx 文件路径">
+        <ui-input class="flex-1" v-value="file" disabled></ui-input>
+        <ui-button v-on:click="_importFile">导入文件</ui-button>
+        <ui-button v-on:click="_refresh">刷新</ui-button>
+    </ui-prop>
+</header>
+
+<section>
+    <ui-box-container class="shadow">
+        <div class="tr">
+            <span class="td" v-for="item in table.head">{{item}}</span>
+        </div>
+        <div class="tr" v-for="row in table.body">
+            <span class="td" v-for="item in row">
+                <ui-input v-value="item"></ui-input>
+            </span>
+        </div>
+    </ui-box-container>
+</section>
+
+<footer>
+    <ui-button v-on:click="_saveJson">导出为 json</ui-button>
+</footer>

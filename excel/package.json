@@ -1,0 +1,22 @@
+{
+  "name": "excel",
+  "version": "0.0.1",
+  "description": "Example",
+  "author": "VisualSJ",
+  "main": "main.js",
+  "main-menu": {
+    "工具/excel转换": {
+      "message": "excel:open"
+    }
+  },
+  "panel": {
+    "main": "panel/index.js",
+    "popable": false,
+    "type": "dockable",
+    "title": "Excel",
+    "height": 300
+  },
+  "dependencies": {
+    "node-xlsx": "^0.7.2"
+  }
+}
